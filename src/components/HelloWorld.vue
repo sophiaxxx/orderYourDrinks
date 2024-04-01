@@ -15,7 +15,14 @@
         <input type="radio" id="currency.id" :value="currency.id" v-model="picked" v-on:change="changeCurrency" />
         <label for="currency.id">{{ currency.name }}</label>
       </div>
+    </div>
 
+    <div>
+      <h3>Select where you want to go?</h3>
+      <div v-for="c in countrys">
+        <input type="checkbox" id="c.id" :value="c.name" v-model="selectedCountry" v-on:change="checkCountry" />
+        <label for="c.id">{{ c.name }}</label>
+      </div>
     </div>
 
     <br>
@@ -44,9 +51,18 @@ export default {
         { id: 2, value: '32', name: '美元' },
       ],
       picked: 0,
+      countrys:[
+        { id: 0, name: '日本' },
+        { id: 1, name: '泰國' },
+        { id: 2, name: '美國' },
+      ],
+      selectedCountry:[]
     }
   },
   methods: {
+    checkCountry() {
+      console.log(this.selectedCountry)
+    },
     changeCurrency() {
       if (this.picked >= 0) {
         this.currency = this.currencys[this.picked].value;

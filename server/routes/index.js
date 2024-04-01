@@ -6,15 +6,15 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'ExpressXsp' });
 });
 
-router.get('/api/personal', function(req,res,next){
+router.get('/personal', function(req,res,next){
   res.send(req.query)
 })
 
-router.post('/api/favorite', function(req, res, next){
+router.post('/favorite', function(req, res, next){
   res.send(req.body)
 })
 
-router.get('/api/user', function(req, res, next) {
+router.get('/user', function(req, res, next) {
   console.log('req: ',req)
   res.send({
     name: 'kim',

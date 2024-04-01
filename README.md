@@ -29,6 +29,7 @@ npm install --save-dev cross-env
 npm install --save-dev cors
 
 # 啟動 nodemon (localhost:3000)
+cd server
 npx nodemon app.js
 
 # 啟動 Vue site (localhost:8080)

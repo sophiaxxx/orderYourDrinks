@@ -15,7 +15,7 @@ module.exports = {
         target: "http://localhost:3000",  //node express api的url位置
         changeOrigin: true,
         pathRewrite: {
-            '^/api': ''
+            '^/api': '/chu'
         }
       }
     },
